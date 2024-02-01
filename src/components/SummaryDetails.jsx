@@ -4,7 +4,9 @@ import group from "../assets/Group.svg";
 import gmail_icon from "../assets/Gmail_icon_(2020) 1.svg";
 import deleteIcon from "../assets/deleteIcon.png";
 import { gmailData, CalendarData } from "./constant/data";
+import { useState } from "react";
 function SummaryDetails() {
+  const [day, setDay] = useState("Today");
   return (
     <div className="w-full bg-[#F6F6F6] flex gap-10 h-full px-40 py-8">
       <div className="w-full flex flex-col gap-14 py-8">
@@ -23,12 +25,35 @@ function SummaryDetails() {
               </p>
             </div>
             <div className="flex gap-4">
-              <button className="text-sm font-normal bg-[#EFEFEF] bg-opacity-80 p-2 rounded-md">
-                Yesterday
-              </button>
-              <div className="flex gap-1 bg-[#FFE071] p-2 rounded-md cursor-pointer">
-                <img src={checkSign} alt="check sign" />
-                <button className="text-sm font-normal">Yesterday</button>
+              <div
+                className={`flex gap-1 ${
+                  day === "Yesterday" ? "bg-[#FFE071]" : ""
+                } p-2 rounded-md cursor-pointer`}
+              >
+                {day === "Yesterday" && (
+                  <img src={checkSign} alt="check sign" />
+                )}
+
+                <button
+                  className="text-sm font-normal"
+                  onClick={() => setDay("Yesterday")}
+                >
+                  Yesterday
+                </button>
+              </div>
+              <div
+                className={`flex gap-1 ${
+                  day === "Today" ? "bg-[#FFE071]" : ""
+                } p-2 rounded-md cursor-pointer`}
+              >
+                {day === "Today" && <img src={checkSign} alt="check sign" />}
+
+                <button
+                  className="text-sm font-normal"
+                  onClick={() => setDay("Today")}
+                >
+                  Today
+                </button>
               </div>
               <img
                 src={calender}

@@ -4,7 +4,9 @@ import group from "../assets/Group.svg";
 import gmail_icon from "../assets/Gmail_icon_(2020) 1.svg";
 import drive from "../assets/drive.svg";
 import linkIcon from "../assets/linkIcon.png";
+import { useState } from "react";
 function Summary() {
+  const [day, setDay] = useState("Today");
   return (
     <div className="w-full bg-[#F6F6F6] flex gap-10 h-full px-40 py-8">
       <div className="w-full flex flex-col gap-14 py-8">
@@ -23,12 +25,35 @@ function Summary() {
               </p>
             </div>
             <div className="flex gap-4">
-              <button className="text-sm font-normal bg-[#EFEFEF] bg-opacity-80 p-2 rounded-md">
-                Yesterday
-              </button>
-              <div className="flex gap-1 bg-[#FFE071] p-2 rounded-md cursor-pointer">
-                <img src={checkSign} alt="check sign" />
-                <button className="text-sm font-normal">Yesterday</button>
+              <div
+                className={`flex gap-1 ${
+                  day === "Yesterday" ? "bg-[#FFE071]" : ""
+                } p-2 rounded-md cursor-pointer`}
+              >
+                {day === "Yesterday" && (
+                  <img src={checkSign} alt="check sign" />
+                )}
+
+                <button
+                  className="text-sm font-normal"
+                  onClick={() => setDay("Yesterday")}
+                >
+                  Yesterday
+                </button>
+              </div>
+              <div
+                className={`flex gap-1 ${
+                  day === "Today" ? "bg-[#FFE071]" : ""
+                } p-2 rounded-md cursor-pointer`}
+              >
+                {day === "Today" && <img src={checkSign} alt="check sign" />}
+
+                <button
+                  className="text-sm font-normal"
+                  onClick={() => setDay("Today")}
+                >
+                  Today
+                </button>
               </div>
               <img
                 src={calender}
@@ -60,14 +85,18 @@ function Summary() {
           <div className="w-full min-h-full flex justify-center items-center bg-[#FFFFFF80] border-2 rounded-lg border-[#009ef8] border-opacity-[0.81]">
             <div className="flex flex-col justify-center items-center gap-8">
               <div className="flex gap-2 justify-center items-center">
-                <img src={gmail_icon} alt="gmail icon" className="w-[53px] h-[36px]" />
+                <img
+                  src={gmail_icon}
+                  alt="gmail icon"
+                  className="w-[53px] h-[36px]"
+                />
               </div>
               <div className="text-lg font-bold leading-[30px]">
                 Connect your <span className="text-[#4285F4]">Gmail</span>{" "}
                 account to easily see all your emails.
               </div>
               <button className="w-[100px] flex items-center justify-center rounded-md bg-[#00F8D6] bg-opacity-50">
-                <img src={linkIcon} alt="link_icon"/>
+                <img src={linkIcon} alt="link_icon" />
                 <p>Gmail</p>
               </button>
             </div>
@@ -80,7 +109,11 @@ function Summary() {
           <div className="w-full min-h-full flex justify-center items-center bg-[#FFFFFF80] border-2 rounded-lg border-[#009ef8] border-opacity-[0.81]">
             <div className="flex flex-col justify-center items-center gap-8">
               <div className="flex gap-2 justify-center items-center">
-                <img src={group} alt="gmail icon" className="w-[53px] h-[36px]" />
+                <img
+                  src={group}
+                  alt="gmail icon"
+                  className="w-[53px] h-[36px]"
+                />
               </div>
               <div className="text-lg font-bold leading-[30px] self-stretch">
                 Connect your{" "}
@@ -96,7 +129,7 @@ function Summary() {
         </div>
         <div className="w-full h-[300px] flex flex-col justify-center gap-2 mt-24">
           <p className="text-[25px] text-left font-bold leading-[55px]">
-          Google Drive (Files & Activities)
+            Google Drive (Files & Activities)
           </p>
           <div className="w-full min-h-full flex justify-center items-center bg-[#FFFFFF80] border-2 rounded-lg border-[#009ef8] border-opacity-[0.81]">
             <div className="flex flex-col justify-center items-center gap-8">
@@ -109,7 +142,7 @@ function Summary() {
                 account to easily see all your Drive Activity.
               </div>
               <button className="w-[100px] flex items-center justify-center rounded-md bg-[#00F8D6] bg-opacity-50">
-                <img src={linkIcon} alt="link icon"/>
+                <img src={linkIcon} alt="link icon" />
                 <p>Drive</p>
               </button>
             </div>
