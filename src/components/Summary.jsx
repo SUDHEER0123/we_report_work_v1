@@ -11,7 +11,6 @@ function Summary() {
         <div className="text-[50px] text-left font-bold leading-5">
           Welcome, Jyot
         </div>
-
         <div className="w-full h-[357px] flex flex-col justify-center items-center gap-4 mt-24">
           <div className="w-full flex items-center justify-between">
             <div className="flex flex-col">
@@ -23,7 +22,6 @@ function Summary() {
                 accounts to see the summary of your work activities. Ready?
               </p>
             </div>
-
             <div className="flex gap-4">
               <button className="text-sm font-normal bg-[#EFEFEF] bg-opacity-80 p-2 rounded-md">
                 Yesterday
@@ -39,7 +37,6 @@ function Summary() {
               />
             </div>
           </div>
-
           <div className="w-full min-h-full flex justify-center items-center bg-[#FFFFFF80] border-2 rounded-lg border-[#009ef8] border-opacity-[0.81]">
             <div className="flex flex-col gap-2">
               <div className="flex gap-2 justify-center items-center">
@@ -56,7 +53,6 @@ function Summary() {
             Summarize
           </button>
         </div>
-
         <div className="w-full h-[300px] flex flex-col justify-center gap-2 mt-24">
           <p className="text-[25px] text-left font-bold leading-[55px]">
             Gmail(Sent Emails)
@@ -77,7 +73,6 @@ function Summary() {
             </div>
           </div>
         </div>
-
         <div className="w-full h-[300px] flex flex-col justify-center gap-2 mt-24">
           <p className="text-[25px] text-left font-bold leading-[55px]">
             Calendar(Events)
@@ -92,7 +87,6 @@ function Summary() {
                 <span className="text-[#4285F4]">Google Calendar</span> account
                 to easily see all your events.
               </div>
-
               <button className="w-[100px] flex items-center justify-center rounded-md bg-[#00F8D6] bg-opacity-50">
                 <img src={linkIcon} alt="link icon" />
                 <p>Calendar</p>
@@ -100,8 +94,6 @@ function Summary() {
             </div>
           </div>
         </div>
-
-
         <div className="w-full h-[300px] flex flex-col justify-center gap-2 mt-24">
           <p className="text-[25px] text-left font-bold leading-[55px]">
           Google Drive (Files & Activities)
@@ -116,7 +108,6 @@ function Summary() {
                 <span className="text-[#4285F4]">Google Drive</span> account
                 account to easily see all your Drive Activity.
               </div>
-
               <button className="w-[100px] flex items-center justify-center rounded-md bg-[#00F8D6] bg-opacity-50">
                 <img src={linkIcon} alt="link icon"/>
                 <p>Drive</p>
@@ -124,11 +115,6 @@ function Summary() {
             </div>
           </div>
         </div>
-
-
-
-
-
       </div>
     </div>
   );

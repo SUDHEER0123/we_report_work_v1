@@ -14,14 +14,12 @@ function LogIn() {
             Daily Summary Automated
           </p>
         </div>
-
         <div className="flex gap-8 items-center">
           <img src={checkLogo} alt="logo" />
           <p className="text-[25px] font-medium text-black leading-[20px]">
             No Mannual Work
           </p>
         </div>
-
         <div className="flex gap-8 items-center">
           <img src={checkLogo} alt="logo" />
           <p className="text-[25px] font-medium text-black leading-[20px]">
@@ -29,14 +27,13 @@ function LogIn() {
           </p>
         </div>
       </div>
-
       <div className="w-[362px] h-[483px] bg-[#FFFFFF80] border-2 rounded-lg border-[#009ef8] border-opacity-[0.81]">
         <div className="px-8 pt-8 pb-2 flex flex-col justify-between h-full">
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-1">
               <p class="text-[25px] font-bold leading-[55px]">Log In</p>
               <p class="text-sm font-normal mb-5">
-              Log In to access your information.
+                Log In to access your information.
               </p>
             </div>
 
@@ -48,13 +45,10 @@ function LogIn() {
 
               <div className="flex justify-center items-center gap-2">
                 <span className="text-xs text-black leading-[20px]">
-                Don’t have an account?
+                  Don’t have an account?
                 </span>
-                <Link
-                  to="/"
-                  className="text-xs leading-[20px] text-[#4285F4]"
-                >
-                 Sign In
+                <Link to="/" className="text-xs leading-[20px] text-[#4285F4]">
+                  Sign In
                 </Link>
               </div>
             </div>

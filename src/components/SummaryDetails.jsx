@@ -11,7 +11,6 @@ function SummaryDetails() {
         <div className="text-[50px] text-left font-bold leading-5">
           Welcome, Jyot
         </div>
-
         <div className="w-full h-[357px] flex flex-col justify-center items-center gap-4 mt-24">
           <div className="w-full flex items-center justify-between">
             <div className="flex flex-col">
@@ -23,7 +22,6 @@ function SummaryDetails() {
                 accounts to see the summary of your work activities. Ready?
               </p>
             </div>
-
             <div className="flex gap-4">
               <button className="text-sm font-normal bg-[#EFEFEF] bg-opacity-80 p-2 rounded-md">
                 Yesterday
@@ -39,7 +37,6 @@ function SummaryDetails() {
               />
             </div>
           </div>
-
           <div className="w-full min-h-full flex justify-center items-center bg-[#FFFFFF80] border-2 rounded-lg border-[#009ef8] border-opacity-[0.81]">
             <div className="flex flex-col gap-2">
               <div className="flex gap-2 justify-center items-center">
@@ -56,7 +53,6 @@ function SummaryDetails() {
             Summarize
           </button>
         </div>
-
         <div className="w-full h-[300px] flex flex-col justify-center gap-2 mt-24">
           <p className="text-[25px] text-left font-bold leading-[55px]">
             Gmail(Sent Emails)
@@ -71,7 +67,6 @@ function SummaryDetails() {
                   <th className="text-[#4285F4] text-xs font-bold leading-[55px] text-left">
                     Thread Name
                   </th>
-
                   <th className="text-[#4285F4] text-xs font-bold leading-[55px] text-left">
                     Message Content
                   </th>
@@ -104,7 +99,6 @@ function SummaryDetails() {
             </table>
           </div>
         </div>
-
         <div className="w-full h-[300px] flex flex-col justify-center gap-2 mt-24">
           <p className="text-[25px] text-left font-bold leading-[55px]">
             Calendar (Events, Reminders, Out of Office)
